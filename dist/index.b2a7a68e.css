@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather:400,700");
 .app-container {
-  background-color: rgb(200, 100, 100);
   margin: 4em;
   text-align: center;
+  background: linear-gradient(to bottom, white, black);
 }
 html {
   font-size: 100%;

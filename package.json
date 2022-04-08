@@ -24,6 +24,14 @@
   },
   "homepage": "https://github.com/fred-dev/studbud#readme",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0-rc.0",
     "parcel": "^2.0.0-rc.0"
-  }
+  },
+  "browserslist": [
+    "last 2 version",
+    "> 5%",
+    "IE 10"
+  ]
 }
+
+
