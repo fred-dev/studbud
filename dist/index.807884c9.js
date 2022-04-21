@@ -1,56 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<title>Studbudy</title>
-	<link href="/index.b2a7a68e.css" rel="stylesheet" type="text/css">
-</head>
-
-<body class="app-container">
-
-	<nav class="top-nav">
-		<ul class="nav-links">
-			<li class="nav-item"> <a href="#home">Home</a> </li>
-			<li class="nav-item"> <a href="#page1">page1</a> </li>
-			<li class="nav-item"> <a href="#page2">page2</a> </li>
-			<li class="nav-item"> <a href="#page3">page3</a> </li>
-
-		</ul>
-	</nav>
-	<div id="home" class="page-container">
-		<h1>Hello World Wide Web</h1>
-	<p>This time with <a href="https://expressjs.com/">Express</a> + <a href="https://v2.parceljs.org/">Parcel</a> + <a href="https://sass-lang.com/">SASS (SCSS)</a>!</p>
-	</div>
-	<div id="page1" class="page-container">
-		<h1>Page 1</h1>
-		<nav class="sub-nav">
-			<ul class="nav-links">
-				<li class="nav-item"> <a href="#page1-1" class="active">Page 1-1</a> </li>
-				<li class="nav-item"> <a href="#page1-2">Page 1-2</a> </li>
-	
-			</ul>
-		</nav>
-		<div id="page1-1" class="sub-page-container">
-			<h2> Page 1 -1</h2>
-		</div>
-		<div id="page1-2" class="sub-page-container" style="display: none;">
-			<h2> Page 1 -2</h2>
-		</div>
-
-	</div>
-	<div id="page2" class="page-container">
-		<h1>Page 2</h1>
-
-	</div>
-	<div id="page3" class="page-container">
-		<h1>Page 3</h1>
-
-	</div>
-
-	
-	<script src="/index.807884c9.js" defer="">// modules are defined as an array
+// modules are defined as an array
 // [ module function, map of requires ]
 //
 // map of requires is short require name -> numeric require
@@ -192,12 +140,12 @@
       this[globalName] = mainExports;
     }
   }
-})({"kVyAy":[function(require,module,exports) {
+})({"ccCuu":[function(require,module,exports) {
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
-var HMR_ENV_HASH = "4e5dac8afe405db7";
-module.bundle.HMR_BUNDLE_ID = "bef96074ac6d14ee";
+var HMR_ENV_HASH = "69f74e7f31319ffd";
+module.bundle.HMR_BUNDLE_ID = "97362287807884c9";
 "use strict";
 function _createForOfIteratorHelper(o, allowArrayLike) {
     var it;
@@ -506,9 +454,92 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}]},["kVyAy"], null, "parcelRequire60da")
+},{}],"jBxsx":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+var _navigation = require("./components/navigation");
+var _navigationDefault = parcelHelpers.interopDefault(_navigation);
+const links = document.querySelectorAll('.top-nav > ul > li > a');
+const pages = document.querySelectorAll('.page-container');
+var nav = new _navigationDefault.default(links, pages);
+nav.getLinks();
+links.forEach(function(link) {
+    link.addEventListener('click', function() {
+        let pageId = nav.getHash(link);
+        nav.setPage(pageId);
+    });
+});
+const sublinks = document.querySelectorAll('.sub-nav > ul > li > a');
+const subPages = document.querySelectorAll('.sub-page-container');
+var subNav = new _navigationDefault.default(sublinks, subPages);
+subNav.links.forEach((link)=>{
+    link.addEventListener('click', function() {
+        let pageId = subNav.getHash(link);
+        subNav.setPage(pageId);
+    });
+});
 
-</script>
-</body>
+},{"./components/navigation":"kj5GH","@parcel/transformer-js/src/esmodule-helpers.js":"1wKXo"}],"kj5GH":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+class Navigation {
+    constructor(links, pages){
+        this.links = links;
+        this.pages = pages;
+        this.currentPage = null;
+    }
+    getLinks() {
+        console.log(this.links);
+    }
+    setPage(pageId) {
+        this.currentPage = pageId;
+        console.log(this.currentPage);
+        this.links.forEach((link)=>{
+            link.classList.remove('active');
+            if (this.getHash(link) === pageId) link.classList.add('active');
+        });
+        this.pages.forEach((page)=>{
+            page.style.display = 'none';
+        });
+        document.getElementById(pageId).style.display = "block";
+    }
+    getHash(link) {
+        return link.href.split("#")[1];
+    }
+}
+exports.default = Navigation;
 
-</html>
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"1wKXo"}],"1wKXo":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, '__esModule', {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === 'default' || key === '__esModule') return;
+        // Skip duplicate re-exports when they have the same value.
+        if (key in dest && dest[key] === source[key]) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}]},["ccCuu","jBxsx"], "jBxsx", "parcelRequire60da")
+
+//# sourceMappingURL=index.807884c9.js.map

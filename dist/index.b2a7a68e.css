@@ -1,8 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather:400,700");
 .app-container {
+  background-color: rgb(255, 200, 200);
+}
+.page-container {
   margin: 4em;
+}
+.page-container#home {
   text-align: center;
-  background: linear-gradient(to bottom, white, black);
+}
+.page-container:not(#home) {
+  display: none;
 }
 html {
   font-size: 100%;
@@ -42,5 +49,28 @@ h5 {
 }
 small, .text_small {
   font-size: 0.8rem;
+}
+nav {
+  width: 100%;
+  background-color: #123;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav .nav-links {
+  list-style: none;
+  display: flex;
+}
+nav .nav-links .nav-item a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 1em 2em;
+}
+nav .nav-links .nav-item a:hover {
+  color: #abc;
+}
+nav .nav-links .nav-item a.active {
+  font-weight: bold;
 }
 /*# sourceMappingURL=index.b2a7a68e.css.map */

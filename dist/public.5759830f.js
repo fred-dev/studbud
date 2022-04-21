@@ -1,56 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<title>Studbudy</title>
-	<link href="/index.b2a7a68e.css" rel="stylesheet" type="text/css">
-</head>
-
-<body class="app-container">
-
-	<nav class="top-nav">
-		<ul class="nav-links">
-			<li class="nav-item"> <a href="#home">Home</a> </li>
-			<li class="nav-item"> <a href="#page1">page1</a> </li>
-			<li class="nav-item"> <a href="#page2">page2</a> </li>
-			<li class="nav-item"> <a href="#page3">page3</a> </li>
-
-		</ul>
-	</nav>
-	<div id="home" class="page-container">
-		<h1>Hello World Wide Web</h1>
-	<p>This time with <a href="https://expressjs.com/">Express</a> + <a href="https://v2.parceljs.org/">Parcel</a> + <a href="https://sass-lang.com/">SASS (SCSS)</a>!</p>
-	</div>
-	<div id="page1" class="page-container">
-		<h1>Page 1</h1>
-		<nav class="sub-nav">
-			<ul class="nav-links">
-				<li class="nav-item"> <a href="#page1-1" class="active">Page 1-1</a> </li>
-				<li class="nav-item"> <a href="#page1-2">Page 1-2</a> </li>
-	
-			</ul>
-		</nav>
-		<div id="page1-1" class="sub-page-container">
-			<h2> Page 1 -1</h2>
-		</div>
-		<div id="page1-2" class="sub-page-container" style="display: none;">
-			<h2> Page 1 -2</h2>
-		</div>
-
-	</div>
-	<div id="page2" class="page-container">
-		<h1>Page 2</h1>
-
-	</div>
-	<div id="page3" class="page-container">
-		<h1>Page 3</h1>
-
-	</div>
-
-	
-	<script src="/index.807884c9.js" defer="">// modules are defined as an array
+// modules are defined as an array
 // [ module function, map of requires ]
 //
 // map of requires is short require name -> numeric require
@@ -192,12 +140,12 @@
       this[globalName] = mainExports;
     }
   }
-})({"kVyAy":[function(require,module,exports) {
+})({"g3MxJ":[function(require,module,exports) {
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
-var HMR_ENV_HASH = "4e5dac8afe405db7";
-module.bundle.HMR_BUNDLE_ID = "bef96074ac6d14ee";
+var HMR_ENV_HASH = "69f74e7f31319ffd";
+module.bundle.HMR_BUNDLE_ID = "8ee6b0455759830f";
 "use strict";
 function _createForOfIteratorHelper(o, allowArrayLike) {
     var it;
@@ -506,9 +454,8 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}]},["kVyAy"], null, "parcelRequire60da")
+},{}],"a8cOd":[function(require,module,exports) {
 
-</script>
-</body>
+},{}]},["g3MxJ","a8cOd"], "a8cOd", "parcelRequire60da")
 
-</html>
+//# sourceMappingURL=public.5759830f.js.map

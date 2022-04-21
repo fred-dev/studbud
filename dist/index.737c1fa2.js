@@ -455,5 +455,9 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}]},["fSpQw"], null, "parcelRequire60da")
+const links = document.querySelector('nav > ul > li > a');
+const pages = "";
+var nav = new Navigation(links, pages);
+nav.getLinks();
 
 //# sourceMappingURL=index.737c1fa2.js.map
