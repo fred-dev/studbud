@@ -75,7 +75,7 @@ nav .nav-links .nav-item a.active {
 }
 #task-grid {
   display: grid;
-  grid-template-columns: 1fl 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "taskform tasklist";
 }
@@ -85,7 +85,7 @@ nav .nav-links .nav-item a.active {
   margin: 0 auto;
 }
 #taskform label {
-  display: inline-block;
+  display: block;
   width: 100%;
 }
 #tasklist {

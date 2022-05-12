@@ -479,7 +479,7 @@ subNav.links.forEach((link)=>{
     });
 });
 
-},{"./components/navigation":"kj5GH","@parcel/transformer-js/src/esmodule-helpers.js":"1wKXo","./components/tasklist":"fQa2z"}],"kj5GH":[function(require,module,exports) {
+},{"./components/navigation":"kj5GH","./components/tasklist":"fQa2z","@parcel/transformer-js/src/esmodule-helpers.js":"1wKXo"}],"kj5GH":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 class Navigation {
