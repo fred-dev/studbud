@@ -100,3 +100,4 @@ function updateEmpty() {
         document.getElementById('emptyList').style.display = 'block';
     }
 }
+
